@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{margin:50px 500px;}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="img/0.png" id="img0">
+        <img src="img/0.png" id="img1">时
+        <img src="img/0.png" id="img2">
+        <img src="img/0.png" id="img3">分
+        <img src="img/0.png" id="img4">
+        <img src="img/0.png" id="img5">秒
+    </div>
+    <script>
+        //数码时钟
+        var shi = setInterval(shi,1000);
+        function shi(){
+            var oDate = new Date();
+            var hour=String(oDate.getHours());
+            var minute=String(oDate.getMinutes());
+            var second=String(oDate.getSeconds());
+
+            if(hour<10){
+                hour+="0";
+            }
+            if(minute<10){
+                minute+="0";
+            }
+            if(second<10){
+                second+="0";
+            }
+            
+            img0.src="img/"+hour[0]+".png";
+            img1.src="img/"+hour[1]+".png";
+            img2.src="img/"+minute[0]+".png";
+            img3.src="img/"+minute[1]+".png";
+            img4.src="img/"+second[0]+".png";
+            img5.src="img/"+second[1]+".png";
+        }
+
+        
+    </script>
+</body>
+</html>
